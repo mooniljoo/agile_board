@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="sprint dashboard" />
+    <link rel="stylesheet" href="style.css" />
+    <title>AGILE BOARD</title>
+    <script>
+      function setValue(e) {
+        console.log(e.target.parentNode);
+      }
+      function endSprint() {
+        alert("계획된 일정 종료시, 예산 소진시");
+      }
+      function reviewSprint() {
+        alert("endSprint됐을 시\nTest, Code Review");
+      }
+      function addSprintBacklog() {
+        alert(
+          "Sprint Backlog에 추가\n수행되어야 하는 Task, 개발가능한 기능의 목록"
+        );
+      }
+      function deleteSprintBacklog() {
+        alert("Sprint Backlog에서 제거");
+      }
+      function raisePriority() {
+        alert("우선순위 한 단계 높아짐");
+      }
+      function lowerPriority() {
+        alert("우선순위 한 단계 낮아짐");
+      }
+      function getRetrospective() {
+        alert("Scrum 팀에 운영중인 방법론 자체에 대한 Review, 문제 개선");
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        📊📌Agile Board 애자일 보드
+      </h1>
+      <section>
+        <h2>👨‍👨‍👦Scrum</h2>
+        <article>
+          <h3>Member</h3>
+          <div class="row-flex avatar_wrapper">
+            <div class="person">
+              <figure class="avatar">
+                <figcaption></figcaption>
+                <img src="stevejobs.jpg" alt="avater" />
+              </figure>
+              <div class="text">
+                <strong class="badge-role">master</strong>
+                <strong class="name">스티븐 잡스</strong>
+              </div>
+            </div>
+            <div class="person">
+              <figure class="avatar">
+                <figcaption></figcaption>
+                <img src="billgates.jpg" alt="avater" />
+              </figure>
+              <div class="text">
+                <strong class="badge-role">team</strong>
+                <strong class="name">빌 게이츠</strong>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+      <h3>
+        <span class="link_text">➕🏃‍♂️sprint🏃‍♀️추가➕</span>
+      </h3>
+      <h3>
+        <span class="link_text">🏃‍♂️sprint2🏃‍♀️ : 스크립트</span>
+      </h3>
+      <section>
+        <h3>
+          <span class="link_text">🏃‍♂️sprint1🏃‍♀️ : 퍼블리싱</span>
+        </h3>
+        <article>
+          <section class="project">
+            <article class="task">
+              <div>
+                <h4>
+                  TARGET DATE
+                </h4>
+                <div class="row-flex">
+                  <span>2020-08-01</span>
+                </div>
+              </div>
+              <div>
+                <h4>
+                  PROGRESS
+                  <i class="icon">
+                    <img src="emoji_running_girl.png" />
+                  </i>
+                </h4>
+                <div class="row-flex">
+                  <span>
+                    <input type="date" disabled="disabled" value="2020-08-03" />
+                  </span>
+                  <span class="bar_wrapper"
+                    ><span class="bar"><span class="text">90%</span> </span>
+                  </span>
+                  <span>
+                    <input type="date" disabled="disabled" value="2020-08-20" />
+                  </span>
+                </div>
+              </div>
+            </article>
+          </section>
+          <table>
+            <caption></caption>
+            <summary></summary>
+            <thead>
+              <tr>
+                <td></td>
+                <td>No.</td>
+                <td>제목</td>
+                <td>목표일</td>
+                <td>비고</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="centered_items"><input type="checkbox" /></td>
+                <td>
+                  <input type="text" disabled="disabled" value="3" />
+                </td>
+                <td>
+                  <input type="text" value="sub2" />
+                </td>
+                <td>
+                  <input type="date" value="2020-08-20" />
+                </td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="centered_items"><input type="checkbox" /></td>
+                <td>
+                  <input type="text" disabled="disabled" value="2" />
+                </td>
+                <td>
+                  <input type="text" value="sub1" />
+                </td>
+                <td>
+                  <input type="date" value="2020-08-03" />
+                </td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="centered_items">
+                  <input type="checkbox" checked="checked" />
+                </td>
+                <td>
+                  <input type="text" disabled="disabled" value="1" />
+                </td>
+                <td>
+                  <input type="text" value="default" />
+                </td>
+                <td>
+                  <input type="date" value="2020-08-03" />
+                </td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="row-flex button_wrapper">
+            <button class="button-outline-primary" onclick="endSprint();">
+              Ending Sprint
+            </button>
+
+            <button class="button-outline-primary" onclick="reviewSprint();">
+              Review Sprint
+            </button>
+          </div>
+        </article>
+      </section>
+      <section>
+        <h2>
+          <span class="link_text">📂Backlog</span>
+        </h2>
+        <article>
+          <div>
+            <h3>📂Product Backlog</h3>
+            <table>
+              <caption></caption>
+              <summary></summary>
+              <thead>
+                <tr>
+                  <td></td>
+                  <td>No.</td>
+                  <td>내용</td>
+                  <td>기술</td>
+                  <td>비고</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="centered_items">
+                    <input type="checkbox" />
+                  </td>
+                  <td>
+                    <input type="text" disabled="disabled" value="1" />
+                  </td>
+                  <td>
+                    <input type="text" value="반응형" />
+                  </td>
+                  <td>
+                    <input type="text" value="" />
+                  </td>
+                  <td>
+                    <input type="text" value="모바일, 타블렛, 피씨" />
+                  </td>
+                </tr>
+                <tr>
+                  <td class="centered_items">
+                    <input type="checkbox" />
+                  </td>
+                  <td>
+                    <input type="text" disabled="disabled" value="2" />
+                  </td>
+                  <td>
+                    <input type="text" value="웹접근성" />
+                  </td>
+                  <td>
+                    <input type="text" value="" />
+                  </td>
+                  <td>
+                    <input type="text" value="" />
+                  </td>
+                </tr>
+                <tr>
+                  <td class="centered_items">
+                    <input type="checkbox" />
+                  </td>
+                  <td>
+                    <input type="text" disabled="disabled" value="3" />
+                  </td>
+                  <td>
+                    <input type="text" value="크로스브라우징" />
+                  </td>
+                  <td>
+                    <input type="text" value="" />
+                  </td>
+                  <td>
+                    <input type="text" value="Edge, Chrome, firefox" />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="row-flex button_wrapper">
+              <button
+                class="button-outline-primary"
+                onclick="addSprintBacklog();"
+              >
+                Sprint Backlog에 추가
+              </button>
+            </div>
+          </div>
+          <div>
+            <h3>📂Sprint Backlog</h3>
+            <table>
+              <caption></caption>
+              <summary></summary>
+              <thead>
+                <tr>
+                  <td></td>
+                  <td>Priority.</td>
+                  <td>내용</td>
+                  <td>기술</td>
+                  <td>비고</td>
+                  <td></td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="centered_items">
+                    <input type="checkbox" />
+                  </td>
+                  <td>
+                    <input type="text" disabled="disabled" value="1" />
+                  </td>
+                  <td>
+                    <input type="text" value="반응형" />
+                  </td>
+                  <td>
+                    <input type="text" value="" />
+                  </td>
+                  <td>
+                    <input type="text" value="모바일, 타블렛, 피씨" />
+                  </td>
+                  <td class="priority_controller_wrapper">
+                    <span
+                      class="priority_controller-up"
+                      onclick="raisePriority();"
+                      >▲</span
+                    >
+                    <span
+                      class="priority_controller-down"
+                      onclick="lowerPriority();"
+                      >▼</span
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td class="centered_items">
+                    <input type="checkbox" />
+                  </td>
+                  <td>
+                    <input type="text" disabled="disabled" value="2" />
+                  </td>
+                  <td>
+                    <input type="text" value="웹접근성" />
+                  </td>
+                  <td>
+                    <input type="text" value="" />
+                  </td>
+                  <td>
+                    <input type="text" value="" />
+                  </td>
+                  <td class="priority_controller_wrapper">
+                    <span
+                      class="priority_controller-up"
+                      onclick="raisePriority();"
+                      >▲</span
+                    >
+                    <span
+                      class="priority_controller-down"
+                      onclick="lowerPriority();"
+                      >▼</span
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td class="centered_items">
+                    <input type="checkbox" />
+                  </td>
+                  <td>
+                    <input type="text" disabled="disabled" value="3" />
+                  </td>
+                  <td>
+                    <input type="text" value="크로스브라우징" />
+                  </td>
+                  <td>
+                    <input type="text" value="" />
+                  </td>
+                  <td>
+                    <input type="text" value="Edge, Chrome, firefox" />
+                  </td>
+                  <td class="priority_controller_wrapper">
+                    <span
+                      class="priority_controller-up"
+                      onclick="raisePriority();"
+                      >▲</span
+                    >
+                    <span
+                      class="priority_controller-down"
+                      onclick="lowerPriority();"
+                      >▼</span
+                    >
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="row-flex button_wrapper">
+              <button
+                class="button-outline-danger"
+                onclick="deleteSprintBacklog();"
+              >
+                삭제
+              </button>
+            </div>
+          </div>
+        </article>
+      </section>
+      <h3>
+        <span class="link_text">🔙Previous Issues</span>
+      </h3>
+      <section>
+        <article>
+          <h2>📈Sprint Report 스프린트 기록</h2>
+          <table>
+            <caption></caption>
+            <summary></summary>
+            <thead>
+              <tr>
+                <td>Aa</td>
+                <td>🏃‍♂️Sprint🏃‍♀️</td>
+                <td>📌목표</td>
+                <td>✨달성</td>
+                <td>🏆달성률</td>
+                <td>📅시작일</td>
+                <td>📅종료일</td>
+                <td>📎비고</td>
+                <td>➕</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <td></td>
+                <td>16</td>
+                <td>11</td>
+                <td>79%</td>
+                <td>2020-07-01</td>
+                <td>2020-08-01</td>
+                <td>메인</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td colspan="9">+ New</td>
+              </tr>
+
+              <tr>
+                <td>COUNT 8</td>
+                <td></td>
+                <td></td>
+                <td>AVERAGE 12.875%</td>
+                <td>AVERAGE 54.375%</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+        <div class="row-flex button_wrapper">
+          <button class="button-outline-primary" onclick="getRetrospective();">
+            Scrum팀에 피드백 남기기
+          </button>
+        </div>
+      </section>
+
+      <aside class="aside">
+        <h5 class="menu_title">Chat</h5>
+        <ul>
+          <li class="chat_list_item">
+            <span class="link_text">🎯 Assigned</span>
+          </li>
+          <li class="chat_list_item">
+            <span class="link_text">
+              💬 Participating
+            </span>
+          </li>
+          <li class="chat_list_item">
+            <span class="link_text">
+              ✋ Mentioned
+            </span>
+          </li>
+          <li class="chat_list_item">
+            <span class="link_text">
+              🙌 Team mentioned
+            </span>
+          </li>
+          <li class="chat_list_item">
+            <span class="link_text">
+              👀 Review requested
+            </span>
+          </li>
+        </ul>
+      </aside>
+    </div>
+  </body>
+</html>
