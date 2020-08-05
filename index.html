@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="sprint dashboard" />
+    <meta name="description" content="AGILE DASHBOARD" />
     <link rel="stylesheet" href="styles/style.css" />
     <title>AGILE BOARD</title>
     <script>
@@ -15,14 +15,6 @@
       }
       function reviewSprint() {
         alert("endSprint됐을 시\nTest, Code Review");
-      }
-      function addSprintBacklog() {
-        alert(
-          "Sprint Backlog에 추가\n수행되어야 하는 Task, 개발가능한 기능의 목록"
-        );
-      }
-      function deleteSprintBacklog() {
-        alert("Sprint Backlog에서 제거");
       }
       function raisePriority() {
         alert("우선순위 한 단계 높아짐");
@@ -170,214 +162,13 @@
             <button class="button-outline-primary" onclick="endSprint();">
               Ending Sprint
             </button>
-
+  
             <button class="button-outline-primary" onclick="reviewSprint();">
               Review Sprint
             </button>
           </div>
         </article>
       </section>
-      <section>
-        <h2>
-          <span class="link_text">📂Backlog</span>
-        </h2>
-        <article>
-          <div>
-            <h3>📂Product Backlog</h3>
-            <table>
-              <caption></caption>
-              <summary></summary>
-              <thead>
-                <tr>
-                  <td></td>
-                  <td>No.</td>
-                  <td>내용</td>
-                  <td>기술</td>
-                  <td>비고</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="centered_items">
-                    <input type="checkbox" />
-                  </td>
-                  <td>
-                    <input type="text" disabled="disabled" value="1" />
-                  </td>
-                  <td>
-                    <input type="text" value="반응형" />
-                  </td>
-                  <td>
-                    <input type="text" value="" />
-                  </td>
-                  <td>
-                    <input type="text" value="모바일, 타블렛, 피씨" />
-                  </td>
-                </tr>
-                <tr>
-                  <td class="centered_items">
-                    <input type="checkbox" />
-                  </td>
-                  <td>
-                    <input type="text" disabled="disabled" value="2" />
-                  </td>
-                  <td>
-                    <input type="text" value="웹접근성" />
-                  </td>
-                  <td>
-                    <input type="text" value="" />
-                  </td>
-                  <td>
-                    <input type="text" value="" />
-                  </td>
-                </tr>
-                <tr>
-                  <td class="centered_items">
-                    <input type="checkbox" />
-                  </td>
-                  <td>
-                    <input type="text" disabled="disabled" value="3" />
-                  </td>
-                  <td>
-                    <input type="text" value="크로스브라우징" />
-                  </td>
-                  <td>
-                    <input type="text" value="" />
-                  </td>
-                  <td>
-                    <input type="text" value="Edge, Chrome, firefox" />
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <div class="row-flex button_wrapper">
-              <button
-                class="button-outline-primary"
-                onclick="addSprintBacklog();"
-              >
-                Sprint Backlog에 추가
-              </button>
-            </div>
-          </div>
-          <div>
-            <h3>📂Sprint Backlog</h3>
-            <table>
-              <caption></caption>
-              <summary></summary>
-              <thead>
-                <tr>
-                  <td></td>
-                  <td>Priority.</td>
-                  <td>내용</td>
-                  <td>기술</td>
-                  <td>비고</td>
-                  <td></td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="centered_items">
-                    <input type="checkbox" />
-                  </td>
-                  <td>
-                    <input type="text" disabled="disabled" value="1" />
-                  </td>
-                  <td>
-                    <input type="text" value="반응형" />
-                  </td>
-                  <td>
-                    <input type="text" value="" />
-                  </td>
-                  <td>
-                    <input type="text" value="모바일, 타블렛, 피씨" />
-                  </td>
-                  <td class="priority_controller_wrapper">
-                    <span
-                      class="priority_controller-up"
-                      onclick="raisePriority();"
-                      >▲</span
-                    >
-                    <span
-                      class="priority_controller-down"
-                      onclick="lowerPriority();"
-                      >▼</span
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td class="centered_items">
-                    <input type="checkbox" />
-                  </td>
-                  <td>
-                    <input type="text" disabled="disabled" value="2" />
-                  </td>
-                  <td>
-                    <input type="text" value="웹접근성" />
-                  </td>
-                  <td>
-                    <input type="text" value="" />
-                  </td>
-                  <td>
-                    <input type="text" value="" />
-                  </td>
-                  <td class="priority_controller_wrapper">
-                    <span
-                      class="priority_controller-up"
-                      onclick="raisePriority();"
-                      >▲</span
-                    >
-                    <span
-                      class="priority_controller-down"
-                      onclick="lowerPriority();"
-                      >▼</span
-                    >
-                  </td>
-                </tr>
-                <tr>
-                  <td class="centered_items">
-                    <input type="checkbox" />
-                  </td>
-                  <td>
-                    <input type="text" disabled="disabled" value="3" />
-                  </td>
-                  <td>
-                    <input type="text" value="크로스브라우징" />
-                  </td>
-                  <td>
-                    <input type="text" value="" />
-                  </td>
-                  <td>
-                    <input type="text" value="Edge, Chrome, firefox" />
-                  </td>
-                  <td class="priority_controller_wrapper">
-                    <span
-                      class="priority_controller-up"
-                      onclick="raisePriority();"
-                      >▲</span
-                    >
-                    <span
-                      class="priority_controller-down"
-                      onclick="lowerPriority();"
-                      >▼</span
-                    >
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <div class="row-flex button_wrapper">
-              <button
-                class="button-outline-danger"
-                onclick="deleteSprintBacklog();"
-              >
-                삭제
-              </button>
-            </div>
-          </div>
-        </article>
-      </section>
-      <h3>
-        <span class="link_text">🔙Previous Issues</span>
-      </h3>
       <section>
         <article>
           <h2>📈Sprint Report 스프린트 기록</h2>
@@ -434,10 +225,18 @@
           </button>
         </div>
       </section>
+      
+      <h3>
+        <span class="link_text">🔙Previous Issues</span>
+      </h3>
 
       <aside class="aside">
         <h5 class="menu_title">Chat</h5>
         <ul>
+          <li class="chat_list_item">
+            <a href="Backlog.html">
+            <span class="link_text">📁Backlog</span></a>
+          </li>
           <li class="chat_list_item">
             <span class="link_text">🎯 Assigned</span>
           </li>
